@@ -1,0 +1,122 @@
+/* styles.scss */
+
+@use '@angular/material' as mat;
+
+//  Se incluyen los estilos comunes de Angular Material
+@include mat.core();
+
+
+// Se establecen los colores personalizados
+$ies-primary: (
+    50 : #fff0e0,
+    100 : #ffd9b3,
+    200 : #ffbf80,
+    300 : #ffa54d,
+    400 : #ff9226,
+    500 : #ff7f00,
+    600 : #ff7700,
+    700 : #ff6c00,
+    800 : #ff6200,
+    900 : #ff4f00,
+    A100 : #ffffff,
+    A200 : #fff5f2,
+    A400 : #ffcfbf,
+    A700 : #ffbca6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$ies-accent:(
+    50 : #e0eaef,
+    100 : #b3cad6,
+    200 : #80a7bb,
+    300 : #4d839f,
+    400 : #26698b,
+    500 : #004e76,
+    600 : #00476e,
+    700 : #003d63,
+    800 : #003559,
+    900 : #002546,
+    A100 : #7ab3ff,
+    A200 : #4796ff,
+    A400 : #1478ff,
+    A700 : #006afa,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Se definen las paletas
+$ies-primary-palette: mat.define-palette($ies-primary);
+$ies-accent-palette: mat.define-palette($ies-accent);
+
+// Se establece nueva tipografía
+$ies-typography: mat.define-typography-config(
+    $font-family: 'Mulish',
+    $display-4: mat.define-typography-level(112px, 112px, 300),
+    $display-3: mat.define-typography-level(56px, 56px, 400),
+    $display-2: mat.define-typography-level(45px, 48px, 400),
+    $display-1: mat.define-typography-level(34px, 40px, 400),
+    $headline: mat.define-typography-level(24px, 32px, 400),
+    $title: mat.define-typography-level(20px, 32px, 500),
+    $subheading-2: mat.define-typography-level(16px, 28px, 400),
+    $subheading-1: mat.define-typography-level(15px, 24px, 400),
+    $body-2: mat.define-typography-level(16px, 24px, 500),
+    $body-1: mat.define-typography-level(16px, 24px, 400),
+    $caption: mat.define-typography-level(12px, 20px, 400),
+    $button: mat.define-typography-level(14px, 14px, 500, 0.75),
+    $input: mat.define-typography-level(14px, 1.125, 400, 0.75)
+);
+
+// Configuración del tema personalizado
+$ies-theme: mat.define-light-theme((
+  color: (
+    primary: $ies-primary-palette,
+    accent: $ies-accent-palette
+  ),
+  typography: $ies-typography
+));
+
+@include mat.all-component-themes($ies-theme);
+@include mat.core-theme($ies-theme);
+@include mat.button-theme($ies-theme);
+
+
+// se aplican algunos estilos que se sobreeescribieron
+.mat-raised-button, .mat-stroked-button, .mat-flat-button {
+    padding: 0.8em 1.4em!important;
+    // margin: 0.65em;
+    min-width: 3em;
+    font-weight: 700;
+    font-size: 1.016rem!important;
+    border-radius: 24px!important;
+    letter-spacing: 0.05em!important;
+    // color: white!important;
+}

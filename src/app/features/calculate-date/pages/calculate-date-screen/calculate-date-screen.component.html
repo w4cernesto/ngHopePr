@@ -1,0 +1,66 @@
+<div class="h-100-vh sha-bg d-flex flex-column justify-content-center align-items-center" >
+
+  <div class="container-fluid pt-4 pb-4" >
+
+    <div class="row" >
+      <div class="col-12 d-flex flex-column justify-content-center align-items-center mb-4">
+
+      <mat-card class="extra-padding">
+        <mat-card-content>
+            
+          <div class="mb-4">
+            <p class="h2 text-center font-weight-bold">Sumar fecha</p>
+          </div>
+
+          <div>
+
+            <mat-form-field appearance="fill" class="w-100 mb-3">
+              <mat-label>Fecha:</mat-label>
+              <input matInput 
+              type="date" 
+              [(ngModel)]="fechaSeleccionada"
+              placeholder="DD/MM/AAAA" >
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="w-100 mb-3">
+              <mat-label>Unidad:</mat-label>
+              <select matNativeControl [(ngModel)]="unidadSeleccionada">
+                <option value="dias">Días</option>
+                <option value="meses">Meses</option>
+                <option value="años">Años</option>
+              </select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="w-100 mb-3">
+              <mat-label>Cantidad:</mat-label>
+              <input matInput 
+              type="number" 
+              min="0" 
+              [(ngModel)]="cantidad"
+              placeholder="2">
+            </mat-form-field>
+
+            <div class="d-flex flex-row justify-content-center mb-4">
+              <button 
+                mat-raised-button 
+                color="accent" 
+                class="w-100"
+                (click)="sumarFecha()">
+                Sumar
+              </button>
+            </div>
+
+            <div *ngIf="resultado" class="resultado">
+              <p >El resultado fue <span class="font-weight-bold cl-orange">{{ resultado | date: 'dd MMM yyyy' }}</span></p>  
+            </div>
+
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+
+  </div>
+</div>
+  
+  

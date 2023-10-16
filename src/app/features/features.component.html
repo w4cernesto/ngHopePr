@@ -1,0 +1,47 @@
+<mat-drawer-container fullscreen>
+    <!-- autosize | fullscreen -->
+    <mat-drawer #drawer opened mode="side" >
+      <mat-nav-list
+        class="h-100-vh d-flex flex-column justify-content-center align-items-center" >
+
+        <!-- icono de apoyo para "abrir" las opciones del menú-->
+        <a mat-list-item 
+            matTooltip="Mostrar menú"
+            (click)="showFiller = !showFiller"
+            routerLink="./welcome/" >
+            <mat-icon mat-list-icon color="accent">menu</mat-icon>
+        </a>
+
+        <!-- calcular día -->
+        <a mat-list-item 
+            (click)="showFiller = !showFiller"
+            routerLink="./calculate-date/" >
+            <mat-icon mat-list-icon color="primary">calendar_month</mat-icon>
+            <span *ngIf="showFiller">Calcular fecha</span>
+        </a>
+
+        <!-- formulario -->
+        <a mat-list-item 
+            (click)="showFiller = !showFiller"
+            routerLink="./form/" >
+            <mat-icon mat-list-icon color="primary">edit_note</mat-icon>
+            <span *ngIf="showFiller">Formulario</span>
+        </a>
+
+        <!-- Conversiones -->
+        <a mat-list-item 
+            (click)="showFiller = !showFiller"
+            routerLink="./conversion/" >
+            <mat-icon mat-list-icon color="primary">autorenew</mat-icon>
+            <span *ngIf="showFiller">Conversiones</span>
+        </a>
+
+      </mat-nav-list>
+  
+    </mat-drawer>
+  
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  
+</mat-drawer-container>

@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+body { 
+    margin: 0; 
+    font-family: 'Mulish', sans-serif;
+    line-height: initial;
+    font-size: 1rem!important;
+    font-weight: 400!important;
+}
+
+body [class^='mat-'],
+body [class*=' mat-'] {
+    font-family: 'Mulish', sans-serif;
+    line-height: initial;
+}
+
+body .material-icons {
+    font-family: 'Material Icons';
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------ TEXT ---------------------------------------------- */
+/* ------------------------------------------------------------------ */
+.text-shadow {
+    text-shadow: 1px 1px 3px rgba(5, 6, 24, 0.5);
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------ COLORS ---------------------------------------------- */
+/* ------------------------------------------------------------------ */
+.cl-white{
+    color: #fff!important;
+}
+.cl-gray{
+    color: #e7e2de;
+}
+.br-white{
+    border: 1px solid #fff!important;
+}
+.br-orange{
+    border: 1px solid #ff7f00!important;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------ ASSETS ---------------------------------------------- */
+/* ------------------------------------------------------------------ */
+.logo-inicio{
+    min-width: 10rem;
+    margin-bottom: 6vh;
+    opacity: 0.8;
+}
+.sha-bg{
+    background-image: url('/assets/img/city2.jpg');
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------ CONTAINERS & SPACER, etc--------------------------------- */
+/* ------------------------------------------------------------------ */
+
+.b-container {
+    padding: 64px 0px 120px;
+} /* contenedor en login */
+.extra-padding {
+    padding: 64px 24px!important;
+}
+.top-spacer-88 {
+    margin-top: 88px;
+}
+.h-100-vh {
+    height: 100vh;
+}
+.p-24-32 {
+    padding: 24px 32px!important;
+}
